@@ -301,16 +301,12 @@ Gasless approvals (Permit)
 Compliance modules
 On-chain governance voting
 Advanced treasury controls
-Author
-
-Katascha White
+Author: Katascha White
 
 License
-
 This project is licensed under the MIT License.
-
 Plain Text
 SPDX-License-Identifier: MIT
-SC-11 Mission
 
+SC-11 Mission
 Create a transparent, traceable, fixed-supply digital asset standard that combines fungible token economics with governance, accountability, and verifiable asset history.
