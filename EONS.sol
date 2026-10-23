@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.2;
 
 contract Config {
-    string public apiKey = "9CD1MZI2S38S3KPQMEFUUA65R92NRA6B5N";
 }
 /**
  * @title SC-11 — Final Fungible Token Standard With Customizable Actions
- * @author Katascha White
+ * @author Katascha White (Katascha.White@outlook.com)
  *
  * @notice
  * SC-11 is a fixed-supply SC-11-compatible fungible token
@@ -36,8 +35,6 @@ contract SC11 {
 
     uint256 public constant TOTAL_SUPPLY =
         100_000_000_000 * 10 ** 18;
-
-    uint256 private _totalSupply;
 
     mapping(address => uint256) private _balances;
 
@@ -152,7 +149,7 @@ contract SC11 {
     // =============================================================
 
     constructor(address kataschaWallet) {
-        address initialOwner = 0x8eB93b429CEaf9EE2E3b1a6A9fb2eaFa91C4723f;
+        address initialOwner = 0x0Cfabc6250a56FA521AAFdf80a9AB0Dfee423E73;
 
         require(
             initialOwner != address(0),
@@ -167,8 +164,6 @@ contract SC11 {
         _owner = initialOwner;
 
         // Fixed supply created exactly once.
-        _totalSupply = TOTAL_SUPPLY;
-
         // Assign supply to owner.
         _balances[initialOwner] = TOTAL_SUPPLY;
 
@@ -216,10 +211,10 @@ contract SC11 {
 
     function totalSupply()
         external
-        view
+        pure
         returns (uint256)
     {
-        return _totalSupply;
+        return TOTAL_SUPPLY;
     }
 
     function balanceOf(
