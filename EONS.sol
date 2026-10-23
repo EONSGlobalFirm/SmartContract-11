@@ -149,7 +149,7 @@ contract SC11 {
     // =============================================================
 
     constructor(address kataschaWallet) {
-        address initialOwner = 0x0Cfabc6250a56FA521AAFdf80a9AB0Dfee423E73;
+        address initialOwner = 0x69eC525Bc385d7a6E0cA22A638Ea9936bc1F0178;
 
         require(
             initialOwner != address(0),
